@@ -10,6 +10,9 @@ jobs:
             - name: checkout code 
               uses: actions/checkout@v4
 
-            - name: list the app  
-              run: "ls"
+            - name: build the app  
+              run: "mvn clean package"
+              shell: bash
+            - name: build the app  
+              run: "mvn test"
               shell: bash
