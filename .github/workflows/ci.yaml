@@ -1,8 +1,7 @@
 name: ci workflow
 on:
-    pull_request:
-        branches:
-            - "main"
+    push
+
 jobs:
     ci-workflow:
         name: ci workflow
@@ -10,12 +9,6 @@ jobs:
         steps:
             - name: checkout code 
             - uses: actions/checkout@v4
-            - name: Set up JDK 11 for x64
-              uses: actions/setup-java@v4
-              with:
-                java-version: '11'
-                distribution: 'temurin'
-              a rchitecture: x64
 
             - name: build the app  
               run: "mvn clean package"
