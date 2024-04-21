@@ -11,6 +11,6 @@ jobs:
       - name: checkout steps
         uses: actions/checkout@v4
       - name: run maven 
-        run: mvn -f /home/runner/work/actionv1/actionv1/pom.xml
+        run: mvn package
         run: mvn clean package
         shell: bash
