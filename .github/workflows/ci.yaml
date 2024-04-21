@@ -11,8 +11,8 @@ jobs:
               uses: actions/checkout@v4
 
             - name: build the app  
-              run: "mvn clean package"
+              run: mvn clean package
               shell: bash
-            - name: build the app  
-              run: "mvn test"
+            - name: test the app  
+              run: mvn test
               shell: bash
